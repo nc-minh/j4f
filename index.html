@@ -6,16 +6,20 @@
     <link rel="stylesheet" href="main.css" />
     <script src="main.js" type="text/javascript"></script>
     <title>Flowers</title>
+    <script>
+      function play() {
+        var audio = document.getElementById('audio');
+        audio.play();
+      }
+    </script>
   </head>
   <body class="not-loaded">
-    <embed
-      src="./happy-birthday-to-you.mp3"
-      loop="true"
-      autostart="true"
-      hidden="true"
-    />
+    <audio style="display: none" controls id="audio">
+      <source src="./happy-birthday-to-you.mp3" type="audio/mpeg" />
+    </audio>
+
     <div class="night"></div>
-    <div class="new-layout">
+    <div class="new-layout" onclick="play()">
       <div class="card">
         <div class="outside">
           <div class="front">
